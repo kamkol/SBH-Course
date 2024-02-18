@@ -8,6 +8,6 @@ public class FunRestController {
 	
 	@GetMapping("/")
 	public String sayHello() {
-		return "Hello world! deleting some errors";
+		return "Hello world!";
 	}
 }
