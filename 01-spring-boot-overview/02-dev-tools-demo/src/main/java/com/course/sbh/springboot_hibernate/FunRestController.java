@@ -1,4 +1,4 @@
-package rest;
+package com.course.sbh.springboot_hibernate;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
