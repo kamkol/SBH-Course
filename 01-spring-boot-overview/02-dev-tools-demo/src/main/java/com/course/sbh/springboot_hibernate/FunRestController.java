@@ -20,4 +20,9 @@ public class FunRestController {
 	public String getDailyFortune() {
 		return "Lucky day!";
 	}
+	
+	@GetMapping("/fruit")
+	public String getDailyFruits() {
+		return "It's time for ananas!";
+	}
 }
