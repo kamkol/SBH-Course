@@ -20,6 +20,7 @@ public class FunRestController {
 		return "Author name: " + authorName + ", book name: " + bookName;
 	}
 	
+	
 	@GetMapping("/")
 	public String sayHello() {
 		return "Hello world!";
