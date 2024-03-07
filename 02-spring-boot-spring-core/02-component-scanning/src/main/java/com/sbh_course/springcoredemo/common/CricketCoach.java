@@ -2,9 +2,6 @@ package com.sbh_course.springcoredemo.common;
 
 import org.springframework.stereotype.Component;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
-
 @Component
 public class CricketCoach implements Coach {
 

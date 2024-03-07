@@ -8,7 +8,7 @@ public class SwimCoach implements Coach{
 
 	@Override
 	public String getDailyWorkout() {
-		return "Swoim 1000 meters!";
+		return "Swim 1000 meters!";
 	}
 
 }
