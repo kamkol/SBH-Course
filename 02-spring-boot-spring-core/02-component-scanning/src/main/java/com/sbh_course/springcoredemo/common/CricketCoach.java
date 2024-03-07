@@ -12,15 +12,6 @@ public class CricketCoach implements Coach {
 		System.out.println("In constructor: " + getClass().getSimpleName());
 	}
 	
-	@PostConstruct
-	public void doMyStartup() {
-		System.out.println("In do myStartUp(): " + getClass().getSimpleName());
-	}
-	
-	@PreDestroy
-	public void doMyCleanUp() {
-		System.out.println("In do myCleanUp(): " + getClass().getSimpleName());
-	}
 	
 	@Override
 	public String getDailyWorkout() {	
