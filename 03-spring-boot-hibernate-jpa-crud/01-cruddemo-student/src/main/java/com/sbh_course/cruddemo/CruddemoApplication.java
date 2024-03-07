@@ -16,6 +16,7 @@ public class CruddemoApplication {
 	public CommandLineRunner commandLineRunner(String[] args) {
 		return runner -> {
 			System.out.println("Hello world!");
+			
 		};
 	}
 
