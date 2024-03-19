@@ -25,16 +25,22 @@ public class CruddemoApplication {
 
 	private void createMultipleStudents(StudentDAO studentDAO) {
 		//create multiple students
-		System.out.println("Creating 3 student objects: ");
+		System.out.println("Creating 3 student objects.");
 		Student tempStudent1 = new Student("John", "Crystal", "john.crystal@yellow.com");
 		Student tempStudent2 = new Student("Barry", "Red", "barry.red@yellow.com");
 		Student tempStudent3 = new Student("Jaruzelim", "Griko", "jaruzelim.griko@yellow.com");
 		
 		//save students objects
-		System.out.println("Saving students: ");
+		System.out.println("Saving students.");
 		studentDAO.save(tempStudent1);
 		studentDAO.save(tempStudent2);
 		studentDAO.save(tempStudent3);
+		
+		//display id of students
+		System.out.println("Saved student. Generated id: " + tempStudent1.getId());
+		System.out.println("Saved student. Generated id: " + tempStudent2.getId());
+		System.out.println("Saved student. Generated id: " + tempStudent3.getId());
+
 	}
 	
 
