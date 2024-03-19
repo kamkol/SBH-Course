@@ -22,7 +22,7 @@ public class StudentDAOImpl implements StudentDAO{
 	@Transactional
 	public void save(Student student) {
 		// TODO Auto-generated method stub
-		
+		entityManager.persist(student);
 	}
 
 }
