@@ -13,7 +13,7 @@ public class CruddemoApplication {
 	}
 
     @Bean
-    public CommandLineRunner commandLineRunner(String[] args) {
+    CommandLineRunner commandLineRunner(String[] args) {
 		return runner -> {
 			System.out.println("Hello world!");
 		};
