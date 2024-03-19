@@ -32,7 +32,8 @@ public class Student {
 		this.lastName = lastName;
 		this.email = email;
 	}
-
+	
+	//define getters/setters
 	public int getId() {
 		return id;
 	}
@@ -64,8 +65,15 @@ public class Student {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	//define getters/setters
-	
+
+	//define toString() method
+	@Override
+	public String toString() {
+		return "Student "
+				+ "[id=" + id + 
+				", firstName=" + firstName + 
+				", lastName=" + lastName + 
+				", email=" + email + "]";
+	}
 	
 }
