@@ -1,9 +1,12 @@
 package com.sbh_course.cruddemo.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import com.sbh_course.cruddemo.entity.Student;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 
 @Repository
 public class StudentDAOImpl implements StudentDAO{
@@ -29,6 +32,16 @@ public class StudentDAOImpl implements StudentDAO{
 	public Student findById(Integer id) {
 		// TODO Auto-generated method stub
 		return entityManager.find(Student.class, id);
+	}
+
+	@Override
+	public List<Student> findAll() {
+		// TODO Auto-generated method stub
+		//create query
+		TypedQuery<Student> typedQuery = entityManager.createQuery("FROM Student", Student.class);
+		
+		//return query results
+		return typedQuery.getResultList();
 	}
 
 }
