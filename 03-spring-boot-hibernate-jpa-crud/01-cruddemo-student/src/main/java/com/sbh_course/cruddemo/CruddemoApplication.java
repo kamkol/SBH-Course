@@ -1,5 +1,8 @@
 package com.sbh_course.cruddemo;
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -26,8 +29,12 @@ public class CruddemoApplication {
 
 	private void queryForStudents(StudentDAO studentDAO) {
 		//get a list of students
-		//display all students
+		List<Student> students = studentDAO.findAll();
 		
+		//display all students
+		for(Student tempStudent : students) {
+			System.out.println(tempStudent);
+		}
 	}
 
 	private void readStudent(StudentDAO studentDAO) {
