@@ -2,7 +2,6 @@ package com.sbh_course.cruddemo;
 
 import java.util.Iterator;
 import java.util.List;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,8 +23,25 @@ public class CruddemoApplication {
 			//createMultipleStudents(studentDAO);
 			//readStudent(studentDAO);
 			//queryForStudents(studentDAO);
-			queryForStudentsByLastName(studentDAO);
+			//queryForStudentsByLastName(studentDAO);
+			updateStudent(studentDAO);
 		};
+	}
+
+
+	private void updateStudent(StudentDAO studentDAO) {
+		// TODO Auto-generated method stub
+		//retrieve student based on the id: primary key
+		int studentId = 1;
+		System.out.println("Getting stundet with id: " + studentId);
+		Student newStudent = studentDAO.findById(studentId);
+		
+		//change first name to "Kamil"
+		newStudent.setFirstName("Kamil");
+		studentDAO.update(newStudent);
+		
+		//display updated student
+		System.out.println("Updated student: " + newStudent);
 	}
 
 	private void queryForStudentsByLastName(StudentDAO studentDAO) {

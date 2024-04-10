@@ -58,4 +58,10 @@ public class StudentDAOImpl implements StudentDAO{
 		return typedQuery.getResultList();
 	}
 
+	@Override
+	public void update(Student student) {
+		// TODO Auto-generated method stub
+		entityManager.merge(student);
+	}
+
 }
