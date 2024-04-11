@@ -31,7 +31,6 @@ public class CruddemoApplication {
 
 
 	private void updateStudent(StudentDAO studentDAO) {
-		// TODO Auto-generated method stub
 		//retrieve student based on the id: primary key
 		int studentId = 1;
 		System.out.println("Getting stundet with id: " + studentId);
@@ -46,7 +45,6 @@ public class CruddemoApplication {
 	}
 
 	private void queryForStudentsByLastName(StudentDAO studentDAO) {
-		// TODO Auto-generated method stub
 		//get a list of students
 		List<Student> theStudents = studentDAO.findByLastName("Duck");
 	
