@@ -6,12 +6,15 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import com.sbh_course.cruddemo.entity.Student;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.PersistenceUnit;
 import jakarta.persistence.TypedQuery;
 
 @Repository
 public class StudentDAOImpl implements StudentDAO{
 
 	//define field for entity manager
+	@PersistenceUnit
 	private EntityManager entityManager;
 	
 	//inject entity manager using constructor injection
