@@ -5,11 +5,12 @@ import java.util.List;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import com.sbh_course.cruddemo.dao.StudentDAO;
 import com.sbh_course.cruddemo.entity.Student;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 public class CruddemoApplication {
 
 	public static void main(String[] args) {
@@ -30,7 +31,6 @@ public class CruddemoApplication {
 
 
 	private void updateStudent(StudentDAO studentDAO) {
-		// TODO Auto-generated method stub
 		//retrieve student based on the id: primary key
 		int studentId = 1;
 		System.out.println("Getting stundet with id: " + studentId);
@@ -45,7 +45,6 @@ public class CruddemoApplication {
 	}
 
 	private void queryForStudentsByLastName(StudentDAO studentDAO) {
-		// TODO Auto-generated method stub
 		//get a list of students
 		List<Student> theStudents = studentDAO.findByLastName("Duck");
 	

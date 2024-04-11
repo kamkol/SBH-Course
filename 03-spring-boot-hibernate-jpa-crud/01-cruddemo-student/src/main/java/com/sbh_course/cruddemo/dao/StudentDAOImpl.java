@@ -6,12 +6,14 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import com.sbh_course.cruddemo.entity.Student;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceUnit;
 import jakarta.persistence.TypedQuery;
 
 @Repository
 public class StudentDAOImpl implements StudentDAO{
 
 	//define field for entity manager
+	@PersistenceUnit
 	private EntityManager entityManager;
 	
 	//inject entity manager using constructor injection
@@ -24,19 +26,16 @@ public class StudentDAOImpl implements StudentDAO{
 	@Override
 	@Transactional
 	public void save(Student student) {
-		// TODO Auto-generated method stub
 		entityManager.persist(student);
 	}
 
 	@Override
 	public Student findById(Integer id) {
-		// TODO Auto-generated method stub
 		return entityManager.find(Student.class, id);
 	}
 
 	@Override
 	public List<Student> findAll() {
-		// TODO Auto-generated method stub
 		//create query
 		TypedQuery<Student> typedQuery = entityManager.createQuery("FROM Student", Student.class);
 		
@@ -46,7 +45,6 @@ public class StudentDAOImpl implements StudentDAO{
 
 	@Override
 	public List<Student> findByLastName(String theLastName) {
-		// TODO Auto-generated method stub
 		//create query
 		TypedQuery<Student> typedQuery = entityManager.createQuery(
 							"FROM Student WHERE lastName=:theData", Student.class);
@@ -60,7 +58,6 @@ public class StudentDAOImpl implements StudentDAO{
 
 	@Override
 	public void update(Student student) {
-		// TODO Auto-generated method stub
 		entityManager.merge(student);
 	}
 
