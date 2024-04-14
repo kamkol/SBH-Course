@@ -32,6 +32,9 @@ public class Student {
 		this.email = email;
 	}
 	
+	//no-argument contructor
+	public Student() {}
+	
 	//define getters/setters
 	public int getId() {
 		return id;
@@ -68,11 +71,12 @@ public class Student {
 	//define toString() method
 	@Override
 	public String toString() {
-		return "Student "
-				+ "id=" + id + 
+		return "Student{" + 
+				"id=" + id + 
 				", firstName=" + firstName + 
 				", lastName=" + lastName + 
-				", email=" + email;
+				", email=" + email +
+				"}";
 	}
 	
 }
