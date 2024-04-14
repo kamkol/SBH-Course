@@ -27,11 +27,13 @@ public class Student {
 	
 	//define constructors
 	public Student(String firstName, String lastName, String email) {
-		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 	}
+	
+	//no-argument contructor
+	public Student() {}
 	
 	//define getters/setters
 	public int getId() {
@@ -69,11 +71,12 @@ public class Student {
 	//define toString() method
 	@Override
 	public String toString() {
-		return "Student "
-				+ "id=" + id + 
+		return "Student{" + 
+				"id=" + id + 
 				", firstName=" + firstName + 
 				", lastName=" + lastName + 
-				", email=" + email;
+				", email=" + email +
+				"}";
 	}
 	
 }

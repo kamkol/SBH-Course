@@ -6,7 +6,7 @@ import com.sbh_course.cruddemo.entity.Student;
 
 public interface StudentDAO {
 
-	void save(Student student);
+	void save(Student theStudent);
 	
 	Student findById (Integer id);
 
@@ -14,5 +14,5 @@ public interface StudentDAO {
 	
 	List<Student> findByLastName(String theLastName);
 	
-	void update (Student student);
+	void update (Student theStudent);
 }

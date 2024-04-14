@@ -5,12 +5,11 @@ import java.util.List;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import com.sbh_course.cruddemo.dao.StudentDAO;
 import com.sbh_course.cruddemo.entity.Student;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+@SpringBootApplication
 public class CruddemoApplication {
 
 	public static void main(String[] args) {
@@ -20,11 +19,11 @@ public class CruddemoApplication {
     @Bean
     CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
 		return runner -> {
-			//createStudent(studentDAO);
-			//createMultipleStudents(studentDAO);
-			//readStudent(studentDAO);
-			//queryForStudents(studentDAO);
-			//queryForStudentsByLastName(studentDAO);
+//			createStudent(studentDAO);
+//			createMultipleStudents(studentDAO);
+//			readStudent(studentDAO);
+//			queryForStudents(studentDAO);
+//			queryForStudentsByLastName(studentDAO);
 			updateStudent(studentDAO);
 		};
 	}
@@ -46,7 +45,7 @@ public class CruddemoApplication {
 
 	private void queryForStudentsByLastName(StudentDAO studentDAO) {
 		//get a list of students
-		List<Student> theStudents = studentDAO.findByLastName("Duck");
+		List<Student> theStudents = studentDAO.findByLastName("Crystal");
 	
 		//display list of students
 		for(Student tempStudent : theStudents) {
