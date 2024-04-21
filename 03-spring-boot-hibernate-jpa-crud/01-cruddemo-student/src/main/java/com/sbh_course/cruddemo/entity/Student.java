@@ -33,9 +33,7 @@ public class Student {
 	}
 	
 	//no-argument contructor
-	public Student() {
-		
-	}
+	public Student() {}
 	
 	//define getters/setters
 	public int getId() {
