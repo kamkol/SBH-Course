@@ -74,8 +74,8 @@ public class StudentDAOImpl implements StudentDAO{
 	@Transactional
 	public int deleteAll() {
 		// TODO Auto-generated method stub
-		
-		return 0;
+		int numRowsDeleted = entityManager.createQuery("DELETE FROM Student").executeUpdate();
+		return numRowsDeleted;
 	}
 
 
