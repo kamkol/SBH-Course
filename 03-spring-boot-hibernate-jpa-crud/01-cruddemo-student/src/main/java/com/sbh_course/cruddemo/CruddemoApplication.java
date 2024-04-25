@@ -50,8 +50,8 @@ public class CruddemoApplication {
 		System.out.println("Getting stundet with id: " + studentId);
 		Student newStudent = studentDAO.findById(studentId);
 		
-		//change first name to "Kamil"
-		newStudent.setFirstName("Kamil");
+		//change first name to "Jonathan"
+		newStudent.setFirstName("Jonathan");
 		studentDAO.update(newStudent);
 		
 		//display updated student
