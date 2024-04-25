@@ -25,10 +25,18 @@ public class CruddemoApplication {
 //			queryForStudents(studentDAO);
 //			queryForStudentsByLastName(studentDAO);
 //			updateStudent(studentDAO);
-			deleteStudent(studentDAO);
+//			deleteStudent(studentDAO);
+			deleteAll(studentDAO);
 		};
 	}
 
+
+	private void deleteAll(StudentDAO studentDAO) {
+		// TODO Auto-generated method stub
+		System.out.println("Deleting all students.");
+		int numRowsDeleted = studentDAO.deleteAll();
+		System.out.println("Deleted row count: " + numRowsDeleted);
+	}
 
 	private void deleteStudent(StudentDAO studentDAO) {
 		int studentId = 3;
@@ -42,8 +50,8 @@ public class CruddemoApplication {
 		System.out.println("Getting stundet with id: " + studentId);
 		Student newStudent = studentDAO.findById(studentId);
 		
-		//change first name to "Kamil"
-		newStudent.setFirstName("Kamil");
+		//change first name to "Jonathan"
+		newStudent.setFirstName("Jonathan");
 		studentDAO.update(newStudent);
 		
 		//display updated student
@@ -72,7 +80,7 @@ public class CruddemoApplication {
 
 	private void readStudent(StudentDAO studentDAO) {
 		//create a student object
-		System.out.println("Creting new student object.");
+		System.out.println("Creating new student object.");
 		Student tempStudent = new Student("Brandon", "Sanderson", "brandon.sanderson@yellow.com");
 		
 		//save the student
