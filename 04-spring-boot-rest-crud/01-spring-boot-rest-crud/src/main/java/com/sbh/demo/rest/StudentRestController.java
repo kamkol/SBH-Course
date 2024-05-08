@@ -19,11 +19,13 @@ public class StudentRestController {
 	//define @PostConstruct to load the student data
 	@PostConstruct
 	public void loadData() {
+		
 		theStudents = new ArrayList<Student>();
 		
 		theStudents.add(new Student("Poornima", "Patel"));
 		theStudents.add(new Student("Josh", "Rossi"));
 		theStudents.add(new Student("Gaby", "Smith"));
+		theStudents.add(new Student("Warclaw", "Fang"));
 	}
 	
 	//define endpoint for "/student" return a list of student
@@ -36,7 +38,7 @@ public class StudentRestController {
 	@GetMapping("/students/{studentId}")
 	public Student getStudent(@PathVariable int studentId) {
 		
-		//just index into the list
+		//get student index from the list
 		return theStudents.get(studentId);
 	}
 	
