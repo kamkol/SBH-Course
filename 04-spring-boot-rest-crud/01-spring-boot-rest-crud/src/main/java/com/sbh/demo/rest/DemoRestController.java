@@ -14,7 +14,7 @@ public class DemoRestController {
 		return "Hello World!";
 	}
 
-	@GetMapping("/hello")
+	@GetMapping("/goodbye")
 	public String sayGoodbye() {
 		return "Goodbye World!";
 	}
