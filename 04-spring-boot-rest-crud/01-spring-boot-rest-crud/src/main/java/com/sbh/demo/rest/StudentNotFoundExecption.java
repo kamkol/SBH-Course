@@ -1,16 +1,17 @@
 package com.sbh.demo.rest;
 
+//@SuppressWarnings("serial")
 public class StudentNotFoundExecption extends RuntimeException {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 7879677716033056596L;
-	
-	
+		public StudentNotFoundExecption (String message) {
+			super(message);
+		}
 
+		public StudentNotFoundExecption (String message, Throwable cause) {
+			super(message, cause);
+		}
+
+		public StudentNotFoundExecption (Throwable cause) {
+			super(cause);
+		}
 }
