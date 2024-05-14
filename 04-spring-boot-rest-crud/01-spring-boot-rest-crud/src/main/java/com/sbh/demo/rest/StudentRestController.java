@@ -3,6 +3,7 @@ package com.sbh.demo.rest;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -51,6 +52,15 @@ public class StudentRestController {
 	//add an exception handler using @ExceptionHanlder
 	@ExceptionHandler
 	public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundExecption exc) {
+		
+		//create a StudentErrorResponse
+		StudentErrorResponse error = new StudentErrorResponse();
+		error.setStatus(HttpStatus.NOT_FOUND.value());
+		error.setMessage(exc.getMessage());
+		error.setTimeStamp(System.currentTimeMillis());
+		
+		//return ResponseEntity
+		
 		return null;
 	}
 	
