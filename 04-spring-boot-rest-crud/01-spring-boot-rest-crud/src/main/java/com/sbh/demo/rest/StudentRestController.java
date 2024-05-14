@@ -60,8 +60,7 @@ public class StudentRestController {
 		error.setTimeStamp(System.currentTimeMillis());
 		
 		//return ResponseEntity
-		
-		return null;
+		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
 	}
 	
 	
