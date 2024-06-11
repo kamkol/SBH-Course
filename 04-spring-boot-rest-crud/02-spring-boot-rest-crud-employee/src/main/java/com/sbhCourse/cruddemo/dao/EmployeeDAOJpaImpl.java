@@ -34,7 +34,6 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO{
 
 	@Override
 	public Employee findById(int theId) {
-		// TODO Auto-generated method stub
 		//get employee
 		Employee thEmployee = entityManager.find(Employee.class, theId);
 		//return the employee
@@ -43,7 +42,6 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO{
 
 	@Override
 	public Employee save(Employee theEmployee) {
-		// TODO Auto-generated method stub
 		//save employee
 		Employee dbEmployee = entityManager.merge(theEmployee);
 		
@@ -53,7 +51,6 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO{
 
 	@Override
 	public void deleteById(int theId) {
-		// TODO Auto-generated method stub
 		//find employee by id
 		Employee theEmployee =entityManager.find(Employee.class, theId);
 		//remove employee
