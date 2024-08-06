@@ -19,6 +19,24 @@ public class EmployeeServiceImpl implements EmployeeService{
 	public List<Employee> findAll() {
 		return employeeDAO.findAll();
 	}
+
+	@Override
+	public Employee findById(int theId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee save(Employee theEmployee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(int theId) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }
