@@ -40,7 +40,7 @@ public class EmployeeRestController {
 	}
 	
 	//add mapping for POST /employees - add new employee
-	@PostMapping("/employees/{employeeId}")
+	@PostMapping("/employees")
 	public Employee addEmployee(@RequestBody Employee theEmployee) {
 		//set id to 0 -> this is to force of new item instead of update
 		theEmployee.setId(0);
