@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import com.sbhCourse.cruddemo.dao.EmployeeDAO;
 import com.sbhCourse.cruddemo.entity.Employee;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
 
@@ -26,14 +28,14 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 	@Override
+	@Transactional
 	public Employee save(Employee theEmployee) {
-		// TODO Auto-generated method stub
 		return employeeDAO.save(theEmployee);
 	}
 
 	@Override
+	@Transactional
 	public void deleteById(int theId) {
-		// TODO Auto-generated method stub
 		employeeDAO.deleteById(theId);
 	}
 	
