@@ -22,20 +22,19 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 	@Override
 	public Employee findById(int theId) {
-		// TODO Auto-generated method stub
-		return null;
+		return employeeDAO.findById(theId);
 	}
 
 	@Override
 	public Employee save(Employee theEmployee) {
 		// TODO Auto-generated method stub
-		return null;
+		return employeeDAO.save(theEmployee);
 	}
 
 	@Override
 	public void deleteById(int theId) {
 		// TODO Auto-generated method stub
-		
+		employeeDAO.deleteById(theId);
 	}
 	
 	
