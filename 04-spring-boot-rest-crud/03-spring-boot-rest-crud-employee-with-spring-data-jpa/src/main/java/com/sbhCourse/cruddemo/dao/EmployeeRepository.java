@@ -6,5 +6,4 @@ import com.sbhCourse.cruddemo.entity.Employee;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
 	
 	
-
 }
