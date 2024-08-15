@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/01-spring-boot-demo/src/main/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/01-spring-boot-demo/src/test/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/02-dev-tools-demo/src/main/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/02-dev-tools-demo/src/test/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/03-actuator-demo/src/main/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/03-actuator-demo/src/test/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/04-actuator-security-demo/src/main/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/04-actuator-security-demo/src/test/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/05-command-line-demo/src/main/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/05-command-line-demo/src/test/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/06-properties-demo/src/main/java"/>
+	<classpathentry kind="src" path="01-spring-boot-overview/06-properties-demo/src/test/java"/>
+	<classpathentry kind="src" path="02-spring-boot-spring-core/01-constructor-injection/src/main/java"/>
+	<classpathentry kind="src" path="02-spring-boot-spring-core/01-constructor-injection/src/test/java"/>
+	<classpathentry kind="lib" path="01-spring-boot-overview/01-spring-boot-demo/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="01-spring-boot-overview/02-dev-tools-demo/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="01-spring-boot-overview/03-actuator-demo/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="01-spring-boot-overview/04-actuator-security-demo/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="01-spring-boot-overview/05-command-line-demo/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="01-spring-boot-overview/06-properties-demo/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="02-spring-boot-spring-core/01-constructor-injection/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="output" path="01-spring-boot-overview/01-spring-boot-demo/target/classes"/>
+</classpath>
