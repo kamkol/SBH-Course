@@ -30,6 +30,8 @@ public class DemoSecurityConfig {
 				.password("{noop}test123")
 				.roles("EMPLOYEE", "MANAGER", "ADMIN")
 				.build();
+		
+		return new InMemoryUserDetailsManager(john, marry, susan);
 
 	}
 
