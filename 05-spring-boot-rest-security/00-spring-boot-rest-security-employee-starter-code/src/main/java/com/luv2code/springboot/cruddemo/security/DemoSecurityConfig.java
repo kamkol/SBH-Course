@@ -6,7 +6,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.codec.CodecConfigurer;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.web.SecurityFilterChain;import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
  
 
@@ -51,6 +53,15 @@ public class DemoSecurityConfig {
 				.requestMatchers(HttpMethod.PUT, "/api/employees").hasRole("MANAGER")
 				.requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN")
 				);
+		
+		//use http basic authentication
+		http.httpBasic(Customizer.withDefaults());
+		
+		//disable cross site request forgery (CSRF)
+		//not required for stateless REST APIs that use POST, PUT, DELET and/or PATCH
+		http.csrf(csrf -> csrf.disable());
+		
+		return http.build();
 		
 	}
 	
