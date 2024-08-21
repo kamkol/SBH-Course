@@ -26,7 +26,12 @@ public class DemoSecurityConfig {
 		JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
 		
 		//define query to retreive a user by username
+		jdbcUserDetailsManager.setUsersByUsernameQuery(
+				"select user_id, pw, active from members where user_id=?"
+				);
+		
 		//define query to retrieve the authorities/roles by username
+		
 		return jdbcUserDetailsManager; 
 	}
 	
