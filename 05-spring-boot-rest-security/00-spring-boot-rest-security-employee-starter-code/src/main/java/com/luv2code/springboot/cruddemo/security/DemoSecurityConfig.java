@@ -1,11 +1,7 @@
 package com.luv2code.springboot.cruddemo.security;
 
-import org.springframework.http.codec.CodecConfigurer;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.provisioning.UserDetailsManager;
-import org.springframework.security.core.userdetails.User;
 
 import javax.sql.DataSource;
 
