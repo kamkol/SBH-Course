@@ -11,7 +11,7 @@ public class DemoController {
 	@GetMapping("/hello")
 	public String sayHello(Model theModel) {
 		theModel.addAttribute("theDate", java.time.LocalDateTime.now());
-		return "Hellow world!";
+		return "helloworld";
 	} 
 	
 }
