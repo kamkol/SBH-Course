@@ -23,6 +23,7 @@ public class HelloWorldController {
 	
 	//need a controller method to read form data and
 	//add data to the model
+	@RequestMapping("/processFormVersionTwo")
 	public String letsShoutDude(HttpServletRequest request, Model model) {
 		return "helloworld";
 	}
