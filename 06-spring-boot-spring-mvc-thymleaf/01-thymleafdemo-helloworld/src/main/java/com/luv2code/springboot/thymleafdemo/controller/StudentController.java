@@ -30,6 +30,9 @@ public class StudentController {
 		//add the list of countries to the model
 		theModel.addAttribute("countries", countries);
 		
+		//add list of favorite language to the model
+		
+		
 		return "student-form";
 	}
 	
