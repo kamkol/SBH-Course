@@ -3,7 +3,6 @@ package com.luv2code.springboot.thymleafdemo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
 import com.luv2code.springboot.thymleafdemo.model.Student;
 
 
