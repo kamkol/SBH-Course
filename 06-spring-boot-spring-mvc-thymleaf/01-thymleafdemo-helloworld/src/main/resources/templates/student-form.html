@@ -9,7 +9,7 @@
 
 <h3>Student Registration Form</h3>
 
-<form th:action="@{/processStudentForm}" th:object="${student}" method="">
+<form th:action="@{/processStudentForm}" th:object="${student}" method="post">
 	
 	First name: <input type="text" th:field="*{firstName}"/>
 	<br><br>
