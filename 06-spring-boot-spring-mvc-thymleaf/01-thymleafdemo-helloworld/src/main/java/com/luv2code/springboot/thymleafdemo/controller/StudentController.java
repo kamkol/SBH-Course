@@ -30,7 +30,6 @@ public class StudentController {
 		//log the input data
 		System.out.println("theStudent: " + theStudent.getFirstName() + " " + theStudent.getLastName());
 		
-		
 		return "student-confrimation";
 	}
 	
