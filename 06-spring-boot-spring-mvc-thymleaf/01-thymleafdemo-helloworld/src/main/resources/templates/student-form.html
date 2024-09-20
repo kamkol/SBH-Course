@@ -24,9 +24,10 @@
 	<br><br>
 	
 	Favorite programming language:
-	<input type="radio" th:field="*{favoriteLanguage}" th:value="Go">Go</input>
-	<input type="radio" th:field="*{favoriteLanguage}" th:value="Java">Java</input>
-	<input type="radio" th:field="*{favoriteLanguage}" th:value="JavaScript">JavaScript</input>
+	<input type="radio" th:field="*{favoriteLanguage}"
+						th:each="tempLang : ${favoriteProgrammingLanguage}"
+						th:value="${tempLang}"
+						th:text="${tempLang}">
 	<br><br>
 	
 	<input type="submit" value="Submit"/>
