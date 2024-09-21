@@ -1,7 +1,6 @@
 package com.luv2code.springboot.thymleafdemo.controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
